@@ -23,32 +23,7 @@ const con = mysql.createConnection({
     queueLimit:500
 })
 
-// API to add user
-server.post('/add-users', (req, res) => {
-    const { fullName, username, userType } = req.body;
 
-    if (!fullName || !username || !userType) {
-        return res.json({
-            status: false,
-            message: 'Please provide fullName, username, and userType.'
-        });
-    }
-
-    const sql = 'INSERT INTO users (fullName, username, userType) VALUES (?, ?, ?)';
-    con.query(sql, [fullName, username, userType], (error, result) => {
-        if (error) {
-            return res.json({
-                status: false,
-                message: Error: ${error.message}
-            });
-        }
-
-        res.json({
-            status: true,
-            message: 'User added successfully!'
-        });
-    });
-});
 
 
 

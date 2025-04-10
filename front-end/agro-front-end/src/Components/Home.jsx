@@ -4,7 +4,11 @@ export default function Home(){
 
     return(
         <>
+             
         
+
+
+
         <div className="home-container">
            <div className="statement">
             <p>Secure Contract for Farmers</p>

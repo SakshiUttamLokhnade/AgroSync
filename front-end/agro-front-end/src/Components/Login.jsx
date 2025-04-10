@@ -13,9 +13,9 @@ function Login (){
     
       const password = watch('password');
     
-    //   const onFormSubmit = (data) => {
-    //     console.log(data);
-    //   };
+      //  const onFormSubmit = (data) => {
+      //    console.log(data);
+      // };
 
     return(
 
@@ -49,7 +49,8 @@ function Login (){
         </div>
         <div className="forgot-container">
             <p>
-                <NavLink to>Forgot Password</NavLink>
+            <NavLink to="/forgot-password">Forgot Password</NavLink>
+                
             </p>
         </div>
   
