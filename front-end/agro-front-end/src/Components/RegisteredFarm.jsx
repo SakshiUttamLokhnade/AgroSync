@@ -17,7 +17,7 @@
 
 //   const fetchFarms = async () => {
 //     try {
-//         const res = await axios.get(`http://localhost:8055/farms/${farmerId}`);
+//         const res = await axios.get(`https://agrosync-1.onrender.com/farms/${farmerId}`);
 //       setFarms(res.data);
 //     } catch (error) {
 //       toast.error('Failed to fetch farms');
@@ -31,7 +31,7 @@
 
 //   const handleAddFarm = async () => {
 //     try {
-//       await axios.post('http://localhost:8055/farms/add', { ...formData, userId: farmerId });
+//       await axios.post('https://agrosync-1.onrender.com/farms/add', { ...formData, userId: farmerId });
 //       toast.success('Farm added');
 //       setFormData({});
 //       fetchFarms();
@@ -42,7 +42,7 @@
 
 //   const handleEditFarm = async () => {
 //     try {
-//       await axios.put(`http://localhost:8055/farms/${editId}`, formData);
+//       await axios.put(`https://agrosync-1.onrender.com/farms/${editId}`, formData);
 //       toast.success('Farm updated');
 //       setFormData({});
 //       setIsEditing(false);
@@ -55,7 +55,7 @@
 //   const handleDeleteFarm = async (id) => {
 //     if (window.confirm('Delete this farm?')) {
 //       try {
-//         await axios.delete(`http://localhost:8055/farms/${id}`);
+//         await axios.delete(`https://agrosync-1.onrender.com/farms/${id}`);
 //         toast.success('Farm deleted');
 //         fetchFarms();
 //       } catch (error) {
@@ -143,7 +143,7 @@ const RegisteredFarm = () => {
 
   const fetchFarms = async () => {
     try {
-      const res = await axios.get(`http://localhost:8055/farms/${farmerId}`);
+      const res = await axios.get(`https://agrosync-1.onrender.com/farms/${farmerId}`);
       setFarms(res.data);
     } catch (error) {
       toast.error('Failed to fetch farms');
@@ -157,7 +157,7 @@ const RegisteredFarm = () => {
 
   const handleAddFarm = async () => {
     try {
-      await axios.post('http://localhost:8055/farms/add', {
+      await axios.post('https://agrosync-1.onrender.com/farms/add', {
         ...formData,
         userId: farmerId,
       });
@@ -171,7 +171,7 @@ const RegisteredFarm = () => {
 
   const handleEditFarm = async () => {
     try {
-      await axios.put(`http://localhost:8055/farms/${editId}`, formData);
+      await axios.put(`https://agrosync-1.onrender.com/farms/${editId}`, formData);
       toast.success('Farm updated');
       setFormData({});
       setIsEditing(false);
@@ -184,7 +184,7 @@ const RegisteredFarm = () => {
   const handleDeleteFarm = async (id) => {
     if (window.confirm('Delete this farm?')) {
       try {
-        await axios.delete(`http://localhost:8055/farms/${id}`);
+        await axios.delete(`https://agrosync-1.onrender.com/farms/${id}`);
         toast.success('Farm deleted');
         fetchFarms();
       } catch (error) {

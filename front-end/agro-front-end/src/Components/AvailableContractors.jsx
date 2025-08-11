@@ -13,7 +13,7 @@ const AvailableContractors = () => {
     const fetchContractors = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:8055/api/contractors');
+        const response = await axios.get('https://agrosync-1.onrender.com/api/contractors');
         // Ensure we're getting an array of contractors
         const contractorsData = Array.isArray(response.data) ? response.data : [];
         setContractors(contractorsData);

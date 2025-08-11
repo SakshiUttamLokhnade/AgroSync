@@ -29,7 +29,7 @@ const ContractorProfile = () => {
 
     const fetchProfile = async () => {
       try {
-        const response = await axios.get(`http://localhost:8055/contractor/profile/${contractorId}`);
+        const response = await axios.get(`https://agrosync-1.onrender.com/contractor/profile/${contractorId}`);
         setProfile(response.data);
         setEditForm(response.data);
         setLoading(false);
@@ -71,7 +71,7 @@ const ContractorProfile = () => {
   const fetchAgreements = async () => {
     setLoadingAgreements(true);
     try {
-      const response = await axios.get(`http://localhost:8055/agreements/user/${contractorId}`);
+      const response = await axios.get(`https://agrosync-1.onrender.com/agreements/user/${contractorId}`);
       if (response.data.status) {
         const filteredAgreements = response.data.data.filter(ag => ag.contractorId === Number(contractorId));
         console.log('Fetched agreements:', filteredAgreements);
@@ -102,7 +102,7 @@ const ContractorProfile = () => {
     e.preventDefault();
     setIsSaving(true);
     try {
-      const response = await axios.put(`http://localhost:8055/contractor/profile/${contractorId}`, editForm);
+      const response = await axios.put(`https://agrosync-1.onrender.com/contractor/profile/${contractorId}`, editForm);
       setProfile(response.data);
       toast.success('Profile updated successfully');
       setActiveTab('profile');
@@ -121,7 +121,7 @@ const ContractorProfile = () => {
     
     setIsDeleting(true);
     try {
-      await axios.delete(`http://localhost:8055/contractor/profile/${contractorId}`);
+      await axios.delete(`https://agrosync-1.onrender.com/contractor/profile/${contractorId}`);
       // Clear session data
       localStorage.removeItem('user');
       localStorage.removeItem('token');

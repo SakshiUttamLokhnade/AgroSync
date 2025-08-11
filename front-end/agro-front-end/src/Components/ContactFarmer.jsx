@@ -30,7 +30,7 @@ const ContactFarmer = () => {
 
     setIsLoading(true);
     try {
-      const response = await fetch('http://localhost:8055/send-farmer-message', {
+      const response = await fetch('https://agrosync-1.onrender.com/send-farmer-message', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

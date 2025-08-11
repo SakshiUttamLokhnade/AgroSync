@@ -35,7 +35,7 @@ const FarmerDetails = () => {
 
       try {
         console.log('Fetching details for farmer ID:', farmerId);
-        const res = await axios.get(`http://localhost:8055/farmer/profile/${farmerId}`);
+        const res = await axios.get(`https://agrosync-1.onrender.com/farmer/profile/${farmerId}`);
         
         if (!res.data || !res.data.status) {
           throw new Error(res.data?.message || 'Invalid response from server');
@@ -76,7 +76,7 @@ const FarmerDetails = () => {
   const handleDeleteAccount = async () => {
     if (window.confirm('Are you sure to delete your account?')) {
       try {
-        await axios.delete(`http://localhost:8055/farmer/profile/${farmerId}`);
+        await axios.delete(`https://agrosync-1.onrender.com/farmer/profile/${farmerId}`);
         toast.success('Account deleted');
         navigate('/register');
       } catch (error) {
@@ -99,7 +99,7 @@ const FarmerDetails = () => {
 
     setIsSending(true);
     try {
-      const response = await fetch('http://localhost:8055/send-farmer-message', {
+      const response = await fetch('https://agrosync-1.onrender.com/send-farmer-message', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -214,7 +214,7 @@ const FarmerDetails = () => {
         {farmer.utara_file_path ? (
           <div className="file-link">
             <a
-              href={`http://localhost:8055/uploads/${farmer.utara_file_path}`}
+              href={`https://agrosync-1.onrender.com/uploads/${farmer.utara_file_path}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -230,7 +230,7 @@ const FarmerDetails = () => {
           {farmer.land_image_path ? (
             <div style={{ maxWidth: '100%', maxHeight: '400px', overflow: 'hidden', border: '1px solid #ddd', borderRadius: '8px' }}>
               <img
-                src={`http://localhost:8055/uploads/${farmer.land_image_path}`}
+                src={`https://agrosync-1.onrender.com/uploads/${farmer.land_image_path}`}
                 alt="Land"
                 onError={handleImageError}
                 style={{

@@ -23,7 +23,7 @@ const FarmerProfile = () => {
 
     const fetchProfile = async () => {
       try {
-        const response = await axios.get(`http://localhost:8055/farmer/profile/${farmerId}`);
+        const response = await axios.get(`https://agrosync-1.onrender.com/farmer/profile/${farmerId}`);
         setProfile(response.data);
         setEditForm(response.data);
         setLoading(false);
@@ -48,7 +48,7 @@ const FarmerProfile = () => {
   const handleSaveProfile = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`http://localhost:8055/farmer/profile/${farmerId}`, editForm);
+      const response = await axios.put(`https://agrosync-1.onrender.com/farmer/profile/${farmerId}`, editForm);
       setProfile(response.data);
       toast.success('Profile updated');
       setActiveTab('profile');
@@ -60,7 +60,7 @@ const FarmerProfile = () => {
   const handleDeleteAccount = async () => {
     if (window.confirm('Are you sure to delete your account?')) {
       try {
-        await axios.delete(`http://localhost:8055/farmer/profile/${farmerId}`);
+        await axios.delete(`https://agrosync-1.onrender.com/farmer/profile/${farmerId}`);
         toast.success('Account deleted');
         navigate('/register');
       } catch (error) {

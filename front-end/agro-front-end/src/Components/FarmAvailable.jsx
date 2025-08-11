@@ -15,7 +15,7 @@ export default function FarmAvailable() {
 
   const getFarmers = async () => {
     try {
-      const res = await axios.get('http://localhost:8055/get-farmers');
+      const res = await axios.get('https://agrosync-1.onrender.com/get-farmers');
       const resData = res.data;
       if (resData.status && resData.data.length > 0) {
         setFarmers(resData.data);

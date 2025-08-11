@@ -17,7 +17,7 @@ export default function Forgot() {
   const onSubmit = async (data) => {
     setIsLoading(true);
     try {
-      const res = await axios.post('http://localhost:8055/forgot-password', data);
+      const res = await axios.post('https://agrosync-1.onrender.com/forgot-password', data);
       toast.success('Password reset link sent to your email!');
     } catch (error) {
       toast.error(error.response?.data?.message || 'Error sending reset link');

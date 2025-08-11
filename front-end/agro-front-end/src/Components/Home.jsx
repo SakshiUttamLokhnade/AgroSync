@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     const fetchFarmers = async () => {
       try {
-        const res = await axios.get('http://localhost:8055/get-farmers');
+        const res = await axios.get('https://agrosync-1.onrender.com/get-farmers');
         if (res.data.status && res.data.data.length > 0) {
           setFarmers(res.data.data);
         } else {

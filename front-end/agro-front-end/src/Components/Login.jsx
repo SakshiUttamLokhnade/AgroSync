@@ -19,7 +19,7 @@ export default function Login() {
   
     setTimeout(async () => {
       try {
-        const response = await axios.post('http://localhost:8055/login', {
+        const response = await axios.post('https://agrosync-1.onrender.com/login', {
           userName: data.userName,
           password: data.password
         });

@@ -10,7 +10,7 @@
 //             <img
 //               src={
 //                 farmer.land_image_path
-//                   ? `http://localhost:8055/uploads/${farmer.land_image_path}`
+//                   ? `https://agrosync-1.onrender.com/uploads/${farmer.land_image_path}`
 //                   : 'https://via.placeholder.com/150'
 //               }
 //               alt="Land"
@@ -46,7 +46,7 @@ export default function FarmList({ farmers, onContact }) {
             <img
               src={
                 farmer.land_image_path
-                  ? `http://localhost:8055/uploads/${farmer.land_image_path}`
+                  ? `https://agrosync-1.onrender.com/uploads/${farmer.land_image_path}`
                   : 'https://via.placeholder.com/150'
               }
               alt="Land"
