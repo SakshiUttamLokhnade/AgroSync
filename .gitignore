@@ -7,10 +7,12 @@ node_modules/
 .env
 .env.local
 .env.*.local
+!.env.example
 
 # Build files
 /build
 /dist
+/dist-ssr
 .next/
 out/
 
@@ -18,6 +20,8 @@ out/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # Local development
 .cache/
@@ -51,7 +55,7 @@ firebase-credentials.json
 # IDE and Editor
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
@@ -79,3 +83,15 @@ Thumbs.db
 
 # Production
 build
+
+# Logs
+logs/
+
+# IDE specific files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
