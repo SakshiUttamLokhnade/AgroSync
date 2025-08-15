@@ -1,0 +1,81 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build files
+/build
+/dist
+.next/
+out/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local development
+.cache/
+coverage/
+.nyc_output/
+
+# Credentials and sensitive data
+*.pem
+*.key
+*.p12
+*.crt
+*.cert
+*_rsa
+*_dsa
+*_ed25519
+*_ecdsa
+
+# Twilio specific
+.twilio/
+twilio-*.json
+
+# Firebase
+firebase-debug.log
+firebase-*.log
+firebase-credentials.json
+
+# AWS credentials
+.aws/
+*.aws
+
+# IDE and Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Testing
+/coverage
+
+# Serverless directories
+.serverless/
+
+# Next.js
+.next/
+
+# Production
+build
